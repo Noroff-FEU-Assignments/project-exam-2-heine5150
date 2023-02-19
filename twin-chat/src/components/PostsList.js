@@ -1,18 +1,45 @@
 import { Link } from "react-router-dom";
+import { Avatar, Box, Card, CardContent, Typography } from "@mui/material";
+import Header from "../components/Header";
+import "../App.css";
 
-export default function PostsList({ articles }) {
+export default function PostsList({ posts }) {
   return (
     <>
-      {articles.map((article) => (
-        <Link
-          key={article.name}
-          className="article-list-item"
-          to={`/posts/${article.name}`}
-        >
-          <h3>{article.title}</h3>
-          <p>{article.content[0].substring(0, 180)}...</p>
-        </Link>
-      ))}
+      {posts &&
+        posts.map((post) => (
+          <Link
+            key={post.id}
+            to={`/posts/${post.id}`}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "40px",
+                margin: "10px 0",
+              }}
+            >
+              <Box sx={{ width: "100px" }}>
+                <Avatar alt="avatar" src={post.author.avatar} />
+                <Header subtitle2={post.author.name} />
+              </Box>
+              <Box sx={{ width: "400px" }}>
+                <Card className="card">
+                  <CardContent
+                    sx={{ wordWrap: "break-word", bgcolor: "#F5F5F5" }}
+                  >
+                    <Header subtitle1={post.title} />
+                    <Typography variant="body2">
+                      {post.body && post.body.substring(0, 120)}...
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Box>
+            </Box>
+          </Link>
+        ))}
     </>
   );
 }
