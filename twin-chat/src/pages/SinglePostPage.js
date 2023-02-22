@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import NotFoundPage from "./NotFoundPage";
-import LoaderIndicator from "../common/LoaderIndicator";
+import CircularProgress from "@mui/material/CircularProgress";
 import { BASE_URL, POSTS_URL } from "../constants/api";
 import Header from "../components/Header";
 import CommentsList from "../components/CommentsList";
@@ -51,7 +51,7 @@ export default function SinglePostPage() {
   }, [postId]);
 
   if (loading) {
-    return <LoaderIndicator />;
+    return <CircularProgress />;
   }
 
   if (!post) {
@@ -63,7 +63,7 @@ export default function SinglePostPage() {
       <BackButton />
       <Box sx={{ maxWidth: 600, padding: 3, margin: "auto" }}>
         {loading ? (
-          <LoaderIndicator />
+          <CircularProgress />
         ) : (
           <Paper>
             <Box padding={3}>

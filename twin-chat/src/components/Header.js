@@ -10,7 +10,7 @@ export default function Header({
   return (
     <Box mb="30px">
       <Typography
-        color="#5e4e46"
+        color="background.dark"
         variant="h1"
         component="h1"
         fontWeight="bold"
@@ -19,7 +19,7 @@ export default function Header({
         {heading}
       </Typography>
       <Typography
-        color="#5e4e46"
+        color="background.dark"
         variant="h2"
         component="h3"
         fontWeight="bold"
@@ -28,7 +28,7 @@ export default function Header({
         {subheading}
       </Typography>
       <Typography
-        color="#5e4e46"
+        color="background.dark"
         variant="h2"
         component="h2"
         fontWeight="bold"
@@ -45,7 +45,12 @@ export default function Header({
       >
         {subtitle1}
       </Typography>
-      <Typography color="#5e4e46" variant="h5" component="h6" fontSize="18px">
+      <Typography
+        color="background.dark"
+        variant="h5"
+        component="h6"
+        fontSize="18px"
+      >
         {subtitle2}
       </Typography>
     </Box>

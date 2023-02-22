@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+
 export const theme = createTheme({
   palette: {
     primary: {
@@ -30,6 +31,20 @@ export const theme = createTheme({
     body1: {
       fontFamily: "Lato, 'Open Sans', sans-serif",
       fontWeight: 400,
+    },
+    button: {
+      fontFamily: "Lato, 'Open Sans', sans-serif",
+    },
+  },
+  components: {
+    MuiCircularProgress: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "40px",
+        },
+      },
     },
   },
 });

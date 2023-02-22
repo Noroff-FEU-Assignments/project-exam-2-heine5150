@@ -1,11 +1,11 @@
 import PostsList from "../components/PostsList";
 import { useState, useEffect, useContext } from "react";
-import LoaderIndicator from "../common/LoaderIndicator";
 import { Link } from "react-router-dom";
 import { BASE_URL, POSTS_URL } from "../constants/api";
 import { AuthContext } from "../context/AuthContext";
 import CommonButton from "../common/commonButton/CommonButton";
 import { Container, Box } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const url =
   BASE_URL + POSTS_URL + "?_author=true&_comments=true&_reactions=true";
@@ -47,7 +47,7 @@ export default function PostsPage() {
   return (
     <Container maxWidth="lg">
       {loading ? (
-        <LoaderIndicator />
+        <CircularProgress />
       ) : (
         <Box
           sx={{
