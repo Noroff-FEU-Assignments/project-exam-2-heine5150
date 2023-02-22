@@ -1,5 +1,5 @@
 import ProfilesList from "../components/ProfilesList";
-import LoaderIndicator from "../common/LoaderIndicator";
+import CircularProgress from "@mui/material/CircularProgress";
 import { useState, useEffect, useContext } from "react";
 import { BASE_URL, PROFILE_URL } from "../constants/api";
 import { AuthContext } from "../context/AuthContext";
@@ -46,7 +46,7 @@ export default function ProfilesPage() {
   return (
     <Container maxWidth="lg">
       <BackButton />
-      {loading ? <LoaderIndicator /> : <ProfilesList profiles={profiles} />}
+      {loading ? <CircularProgress /> : <ProfilesList profiles={profiles} />}
     </Container>
   );
 }

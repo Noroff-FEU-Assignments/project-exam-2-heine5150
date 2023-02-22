@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from "react";
-import LoaderIndicator from "../common/LoaderIndicator";
+import CircularProgress from "@mui/material/CircularProgress";
 import { useParams } from "react-router-dom";
-import NotFoundPage from "./NotFoundPage";
 import { BASE_URL, PROFILE_URL } from "../constants/api";
 import FollowUnfollow from "../components/FollowUnfollow";
 import { AuthContext } from "../context/AuthContext";
@@ -50,15 +49,11 @@ export default function SingleProfilePage() {
     loadProfile();
   }, [profileName]);
 
-  if (!profile) {
-    return <NotFoundPage />;
-  }
-
   return (
     <Container>
       <BackButton />
       {loading ? (
-        <LoaderIndicator />
+        <CircularProgress />
       ) : (
         <Paper>
           {profile.banner ? (
