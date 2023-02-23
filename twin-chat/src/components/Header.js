@@ -29,7 +29,7 @@ export default function Header({
       </Typography>
       <Typography
         color="background.dark"
-        variant="h2"
+        variant="h3"
         component="h2"
         fontWeight="bold"
         fontSize="36px"
