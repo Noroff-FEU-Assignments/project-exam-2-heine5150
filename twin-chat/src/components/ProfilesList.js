@@ -24,6 +24,9 @@ export default function ProfilesList({ profiles }) {
               sx={{
                 width: "450px",
                 marginBottom: "20px",
+                ":hover": {
+                  boxShadow: 10,
+                },
               }}
             >
               <CardContent>

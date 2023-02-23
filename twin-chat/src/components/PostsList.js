@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { Avatar, Box, Card, CardContent, Typography } from "@mui/material";
 import Header from "../components/Header";
-import "../App.css";
+import { useTheme } from "@mui/material/styles";
 
 export default function PostsList({ posts }) {
+  const theme = useTheme();
+
   return (
     <>
       {posts &&
@@ -13,31 +15,55 @@ export default function PostsList({ posts }) {
             to={`/posts/${post.id}`}
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <Box
+            <Card
               sx={{
                 display: "flex",
-                alignItems: "center",
-                gap: "40px",
+                flexDirection: {
+                  xs: "column",
+                  md: "row",
+                },
+                alignItems: {
+                  xs: "flex.start",
+                  md: "center",
+                },
+                gap: {
+                  xs: 0,
+                  md: "40px",
+                },
                 margin: "10px 0",
+                padding: "5px",
+                border: "2px solid #f06292",
+                ":hover": {
+                  boxShadow: 10,
+                },
+                bgcolor: "background.main",
               }}
             >
-              <Box sx={{ width: "100px" }}>
+              <Box sx={{ width: "100px", border: "2px solid hotpink" }}>
                 <Avatar alt="avatar" src={post.author.avatar} />
                 <Header subtitle2={post.author.name} />
               </Box>
-              <Box sx={{ width: "400px" }}>
-                <Card className="card">
-                  <CardContent
-                    sx={{ wordWrap: "break-word", bgcolor: "background.main" }}
-                  >
-                    <Header subtitle1={post.title} />
-                    <Typography variant="body2">
-                      {post.body && post.body.substring(0, 120)}...
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Box>
-            </Box>
+              <CardContent
+                sx={{
+                  width: "400px",
+                  mt: {
+                    xs: "20px",
+                    md: "0",
+                  },
+                  ml: {
+                    xs: "0",
+                    md: "20px",
+                  },
+                  wordWrap: "break-word",
+                  border: "2px solid blue",
+                }}
+              >
+                <Header subtitle1={post.title} />
+                <Typography variant="body1">
+                  {post.body && post.body.substring(0, 120)}...
+                </Typography>
+              </CardContent>
+            </Card>
           </Link>
         ))}
     </>

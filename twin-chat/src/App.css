@@ -9,13 +9,3 @@ body {
 a {
   text-decoration: none;
 }
-
-.card {
-  max-width: 500px;
-  margin: 10px auto;
-  transition: transform 0.6s;
-}
-
-.card:hover {
-  transform: scale(1.1);
-}

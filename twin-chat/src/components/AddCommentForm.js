@@ -1,7 +1,6 @@
 import { useState, useContext } from "react";
 import { BASE_URL, POSTS_URL } from "../constants/api";
 import { AuthContext } from "../context/AuthContext";
-import AddCommentOutlinedIcon from "@mui/icons-material/AddCommentOutlined";
 import { Box, TextField, Typography, Button } from "@mui/material";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -60,10 +59,7 @@ export default function AddCommentForm({ articleName }) {
   return (
     <>
       <Box sx={{ display: "flex", flexDirection: "column", marginTop: "20px" }}>
-        <Typography variant="h6">
-          <AddCommentOutlinedIcon style={{ fontSize: "inherit" }} /> Add a
-          Comment
-        </Typography>
+        <Typography variant="h5">Add a Comment:</Typography>
         <form onSubmit={handleSubmit(onSubmit)}>
           <TextField
             style={{ maxWidth: "250px", margin: "5px 0" }}

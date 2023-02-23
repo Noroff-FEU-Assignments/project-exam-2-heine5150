@@ -104,7 +104,7 @@ export default function SinglePostPage() {
               {post.media ? (
                 <img
                   src={post.media}
-                  alt="avatar"
+                  alt="image from post"
                   style={{ maxWidth: "100%" }}
                 />
               ) : null}
