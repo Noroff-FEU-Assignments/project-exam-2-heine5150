@@ -38,7 +38,12 @@ export default function PostsList({ posts }) {
                 bgcolor: "background.main",
               }}
             >
-              <Box sx={{ width: "100px" }}>
+              <Box
+                sx={{
+                  width: "100px",
+                  margin: "10px",
+                }}
+              >
                 <Avatar alt="avatar" src={post.author.avatar} />
                 <Header subtitle2={post.author.name} />
               </Box>
