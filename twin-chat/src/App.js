@@ -27,7 +27,7 @@ function App() {
           <div className="App">
             <Navbar auth={auth} />
             <Container>
-              <div id="page-body">
+              <div id="page-body" style={{ marginBottom: "80px" }}>
                 <Routes>
                   <Route path="/" element={<LandingPage />} />
                   <Route path="/login" element={<LoginPage auth={auth} />} />
