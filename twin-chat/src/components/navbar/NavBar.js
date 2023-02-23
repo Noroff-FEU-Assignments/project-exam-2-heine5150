@@ -69,7 +69,7 @@ export default function NavBar() {
             Life with Twins
           </Typography>
           <Typography
-            variant="h4"
+            variant="h6"
             noWrap
             component="a"
             href={auth ? "/posts" : "/"}

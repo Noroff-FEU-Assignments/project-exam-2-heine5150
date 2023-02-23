@@ -23,8 +23,8 @@ export default function PostsList({ posts }) {
                   md: "row",
                 },
                 alignItems: {
-                  xs: "flex.start",
-                  md: "center",
+                  xs: "flex-start",
+                  md: "flex-start",
                 },
                 gap: {
                   xs: 0,
@@ -32,20 +32,22 @@ export default function PostsList({ posts }) {
                 },
                 margin: "10px 0",
                 padding: "5px",
-                border: "2px solid #f06292",
                 ":hover": {
                   boxShadow: 10,
                 },
                 bgcolor: "background.main",
               }}
             >
-              <Box sx={{ width: "100px", border: "2px solid hotpink" }}>
+              <Box sx={{ width: "100px" }}>
                 <Avatar alt="avatar" src={post.author.avatar} />
                 <Header subtitle2={post.author.name} />
               </Box>
               <CardContent
                 sx={{
-                  width: "400px",
+                  width: {
+                    xs: "80vw",
+                    md: "400px",
+                  },
                   mt: {
                     xs: "20px",
                     md: "0",
@@ -55,13 +57,19 @@ export default function PostsList({ posts }) {
                     md: "20px",
                   },
                   wordWrap: "break-word",
-                  border: "2px solid blue",
                 }}
               >
                 <Header subtitle1={post.title} />
                 <Typography variant="body1">
                   {post.body && post.body.substring(0, 120)}...
                 </Typography>
+                {post.media ? (
+                  <img
+                    src={post.media}
+                    alt="image from post"
+                    style={{ maxWidth: "100%" }}
+                  />
+                ) : null}
               </CardContent>
             </Card>
           </Link>

@@ -1,5 +1,4 @@
 import { Box, Card, Avatar, Typography } from "@mui/material";
-import { width } from "@mui/system";
 
 export default function CommentsList({ comments }) {
   return (
@@ -9,9 +8,17 @@ export default function CommentsList({ comments }) {
         {comments.map((comment) => (
           <Box
             key={comment.id}
-            sx={{ display: "flex", alignItems: "flex-start", gap: "30px" }}
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: "flex-start",
+              gap: {
+                xs: "10px",
+                md: "40px",
+              },
+            }}
           >
-            <Box>
+            <Box p={1}>
               <Typography variant="subtitle2">created by: </Typography>
               <Avatar
                 src={comment.author.avatar}
@@ -22,7 +29,12 @@ export default function CommentsList({ comments }) {
                 {comment.author.name}
               </Typography>
             </Box>
-            <Card style={{ padding: "10px", minWidth: "200px" }}>
+            <Card
+              style={{
+                padding: "10px",
+                minWidth: "200px",
+              }}
+            >
               <Typography variant="body1" gutterBottom>
                 {comment.body}
               </Typography>

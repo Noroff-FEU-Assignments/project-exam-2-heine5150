@@ -61,16 +61,20 @@ export default function SinglePostPage() {
   return (
     <Container>
       <BackButton />
-      <Box sx={{ maxWidth: 600, padding: 3, margin: "auto" }}>
+      <Box sx={{ maxWidth: 600, margin: "auto" }}>
         {loading ? (
           <CircularProgress />
         ) : (
           <Paper>
-            <Box padding={3}>
+            <Box padding={1}>
               <Box
                 sx={{
                   display: "flex",
-                  alignItems: "center",
+                  flexDirection: {
+                    xs: "column",
+                    md: "row",
+                  },
+                  alignItems: "flex-start",
                   gap: "20px",
                   marginBottom: "30px",
                 }}
