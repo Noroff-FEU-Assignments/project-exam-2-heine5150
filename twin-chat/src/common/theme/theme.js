@@ -13,22 +13,41 @@ export const theme = createTheme({
     },
   },
   typography: {
+    fontFamily: "Raleway, 'Open Sans', sans-serif",
     h1: {
-      fontFamily: "Raleway, 'Open Sans', sans-serif",
-      fontWeight: {
-        regular: 400,
-        medium: 500,
-        bold: 600,
-      },
+      fontWeight: 600,
+    },
+    h2: {
+      fontWeight: 600,
+      fontSize: "22px",
+    },
+    h3: {
+      fontWeight: 600,
+      fontSize: "18px",
+    },
+    h4: {
+      fontWeight: 600,
+      fontSize: "16px",
+    },
+    h5: {
+      fontWeight: 500,
+      fontSize: "14px",
+    },
+    h6: {
+      fontWeight: 500,
+      fontSize: "12px",
     },
     subtitle1: {
-      fontFamily: "Raleway,'Open Sans', sans-serif",
-      fontWeight: {
-        regular: 400,
-        medium: 500,
-      },
+      fontWeight: 500,
+    },
+    subtitle2: {
+      fontWeight: 500,
     },
     body1: {
+      fontFamily: "Lato, 'Open Sans', sans-serif",
+      fontWeight: 400,
+    },
+    body2: {
       fontFamily: "Lato, 'Open Sans', sans-serif",
       fontWeight: 400,
     },
@@ -40,8 +59,6 @@ export const theme = createTheme({
     MuiCircularProgress: {
       styleOverrides: {
         root: {
-          display: "flex",
-          justifyContent: "center",
           marginTop: "40px",
         },
       },

@@ -28,7 +28,7 @@ export default function PostsList({ posts }) {
               <Box sx={{ width: "400px" }}>
                 <Card className="card">
                   <CardContent
-                    sx={{ wordWrap: "break-word", bgcolor: "#F5F5F5" }}
+                    sx={{ wordWrap: "break-word", bgcolor: "background.main" }}
                   >
                     <Header subtitle1={post.title} />
                     <Typography variant="body2">

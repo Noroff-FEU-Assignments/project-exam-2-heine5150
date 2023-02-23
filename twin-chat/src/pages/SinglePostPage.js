@@ -81,10 +81,12 @@ export default function SinglePostPage() {
                   sx={{ width: 56, height: 56 }}
                 />
                 <Box>
-                  <Typography variant="body1" gutterBottom>
-                    {post.author.name}
-                  </Typography>
-                  <Typography variant="body2" gutterBottom>
+                  <Header subtitle2={post.author.name} />
+                  <Typography
+                    variant="body2"
+                    mt={-4}
+                    style={{ fontWeight: "bold" }}
+                  >
                     {post.author.email}
                   </Typography>
                 </Box>

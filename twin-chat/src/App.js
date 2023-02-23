@@ -62,7 +62,7 @@ function App() {
                   />
                   <Route path="*" element={<NotFoundPage auth={auth} />} />
                 </Routes>
-                {/* <Footer /> */}
+                <Footer />
               </div>
             </Container>
           </div>
