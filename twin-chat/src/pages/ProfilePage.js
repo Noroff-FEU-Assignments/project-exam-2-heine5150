@@ -66,11 +66,10 @@ export default function ProfilePage() {
               }}
               alt="banner image"
             />
-            <Box sx={{ padding: "30px" }}>
+            <Box sx={{ padding: { xs: "5px", md: "30px" } }}>
               <Stack
                 sx={{
-                  paddingTop: "10px",
-                  alignItems: "start",
+                  paddingTop: "5px",
                   marginBottom: "10px",
                 }}
               >
