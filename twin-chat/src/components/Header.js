@@ -41,7 +41,8 @@ export default function Header({
         color="textSecondary"
         variant="h5"
         component="h5"
-        fontSize="22px"
+        fontSize="24px"
+        fontWeight="medium"
       >
         {subtitle1}
       </Typography>

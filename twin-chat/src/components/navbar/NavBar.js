@@ -52,7 +52,7 @@ export default function NavBar() {
             <img src={logo} sx={{}} height="55px" />
           </a>
           <Typography
-            variant="h5"
+            variant="h2"
             noWrap
             component="a"
             href={auth ? "/posts" : "/"}
@@ -60,10 +60,8 @@ export default function NavBar() {
               mr: 2,
               display: { xs: "none", md: "flex" },
               flexGrow: 1,
-              fontFamily: "raleway",
-              fontWeight: 600,
               letterSpacing: ".3rem",
-              color: "#5e4e46",
+              color: "background.dark",
               textDecoration: "none",
               justifyContent: "center",
             }}
@@ -71,7 +69,7 @@ export default function NavBar() {
             Life with Twins
           </Typography>
           <Typography
-            variant="h6"
+            variant="h4"
             noWrap
             component="a"
             href={auth ? "/posts" : "/"}
@@ -79,10 +77,8 @@ export default function NavBar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "raleway",
-              fontWeight: 600,
               letterSpacing: ".3rem",
-              color: "#5e4e46",
+              color: "background.dark",
               textDecoration: "none",
               justifyContent: "center",
             }}

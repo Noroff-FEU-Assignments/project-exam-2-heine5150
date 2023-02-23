@@ -5,7 +5,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { BASE_URL, POSTS_URL } from "../constants/api";
 import { AuthContext } from "../context/AuthContext";
-import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
 import { TextField, Typography, Button, Box } from "@mui/material";
 
 const url = BASE_URL + POSTS_URL;
@@ -57,10 +56,7 @@ export default function UpdatePost() {
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", marginTop: "20px" }}>
-      <Typography variant="h6">
-        <ModeEditOutlineOutlinedIcon style={{ fontSize: "inherit" }} /> Update
-        Post
-      </Typography>
+      <Typography variant="h5">Update Post:</Typography>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit(onSubmit)}>
         <TextField
