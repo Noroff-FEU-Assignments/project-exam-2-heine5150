@@ -124,7 +124,6 @@ export default function LoginPage() {
             </Button>
           </Box>
         </form>
-
         <Link to="/register">Not registered? Do it here!</Link>
       </Box>
     </Container>
