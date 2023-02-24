@@ -125,7 +125,16 @@ export default function LoginPage() {
           </Box>
         </form>
 
-        <Link to="/register" variant="body2" underline="hover" color="primary">
+        <Link
+          to="/register"
+          sx={{
+            textDecoration: "none",
+            color: "#5e4e46",
+            ":hover": {
+              textDecoration: "underline",
+            },
+          }}
+        >
           Not registered? Do it here!
         </Link>
       </Box>
