@@ -65,7 +65,6 @@ export default function FollowUnfollow({ profileName }) {
         onClick={follow}
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
           gap: { xs: "10px", md: "20px" },
         }}
       >
