@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { BASE_URL, POSTS_URL } from "../constants/api";
 import { AuthContext } from "../context/AuthContext";
 import { Button } from "@mui/material";
@@ -9,7 +9,6 @@ const emoji = "❤️";
 export default function ReactionEmoji({ postId }) {
   const { auth } = useContext(AuthContext);
   const { accessToken } = auth;
-  const [value, setValue] = useState();
 
   const addLike = async () => {
     try {
@@ -23,7 +22,7 @@ export default function ReactionEmoji({ postId }) {
         throw new Error(`Error ${response.status}`);
       }
       const data = await response.json();
-      setValue({ data });
+      this.setState({});
     } catch (error) {
       console.error(error);
     }
