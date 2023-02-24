@@ -49,7 +49,7 @@ export default function NavBar() {
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <a href={auth ? "/posts" : "/"}>
-            <img src={logo} sx={{}} height="55px" />
+            <img src={logo} sx={{}} height="55px" alt="Logo" />
           </a>
           <Typography
             variant="h2"
