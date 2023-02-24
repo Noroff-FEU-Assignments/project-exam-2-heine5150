@@ -125,7 +125,7 @@ export default function LoginPage() {
           </Box>
         </form>
 
-        <Link to="/register" variant="body2">
+        <Link to="/register" variant="body2" underline="hover" color="primary">
           Not registered? Do it here!
         </Link>
       </Box>
