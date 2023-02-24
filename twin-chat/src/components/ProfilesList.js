@@ -22,7 +22,7 @@ export default function ProfilesList({ profiles }) {
           >
             <Card
               sx={{
-                width: "450px",
+                width: { xs: "100%", md: "450px" },
                 marginBottom: "20px",
                 ":hover": {
                   boxShadow: 10,

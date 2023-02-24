@@ -10,25 +10,23 @@ export default function ReactionEmoji({ postId }) {
   const { auth } = useContext(AuthContext);
   const { accessToken } = auth;
 
-  const addLike = () => {
-    fetch(`${url}/${postId}/react/${emoji}`, {
-      method: "PUT",
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    })
-      .then((response) => {
-        console.log("Received response", response);
-        if (!response.ok) {
-          throw new Error(`Error ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Received data", data);
-        window.location.reload();
-      })
-      .catch((error) => console.error(error));
+  const addLike = async () => {
+    try {
+      const response = await fetch(`${url}/${postId}/react/${emoji}`, {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}`);
+      }
+      const data = await response.json();
+      console.log("Received data", data);
+      window.location.reload();
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

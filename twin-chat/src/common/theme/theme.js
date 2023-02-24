@@ -59,6 +59,8 @@ export const theme = createTheme({
     MuiCircularProgress: {
       styleOverrides: {
         root: {
+          display: "flex",
+          justifyContent: "center",
           marginTop: "40px",
         },
       },
@@ -68,7 +70,7 @@ export const theme = createTheme({
     values: {
       xs: 0,
       sm: 500,
-      md: 550,
+      md: 580,
       lg: 1200,
       xl: 1536,
     },

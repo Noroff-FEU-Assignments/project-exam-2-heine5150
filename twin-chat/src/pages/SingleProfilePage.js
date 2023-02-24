@@ -80,7 +80,6 @@ export default function SingleProfilePage() {
             <Stack
               sx={{
                 paddingTop: "10px",
-                alignItems: "start",
                 marginBottom: "10px",
               }}
             >

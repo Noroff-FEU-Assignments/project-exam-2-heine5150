@@ -4,6 +4,7 @@ import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
 import PersonAddDisabledOutlinedIcon from "@mui/icons-material/PersonAddDisabledOutlined";
 import { BASE_URL, PROFILE_URL } from "../constants/api";
 import Button from "@mui/material/Button";
+import { Box } from "@mui/material";
 
 const url = BASE_URL + PROFILE_URL;
 
@@ -57,13 +58,21 @@ export default function FollowUnfollow({ profileName }) {
   };
 
   return (
-    <>
-      <Button variant="contained" size="medium" onClick={follow}>
+    <Box>
+      <Button
+        variant="contained"
+        size="medium"
+        onClick={follow}
+        sx={{
+          marginRight: { xs: 0, md: "20px" },
+          marginBottom: { xs: "10px", md: 0 },
+        }}
+      >
         <PersonAddOutlinedIcon /> Follow
       </Button>
       <Button variant="contained" size="medium" onClick={unFollow}>
         <PersonAddDisabledOutlinedIcon /> Unfollow
       </Button>
-    </>
+    </Box>
   );
 }

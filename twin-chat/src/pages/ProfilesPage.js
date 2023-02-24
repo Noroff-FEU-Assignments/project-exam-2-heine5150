@@ -3,7 +3,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useState, useEffect, useContext } from "react";
 import { BASE_URL, PROFILE_URL } from "../constants/api";
 import { AuthContext } from "../context/AuthContext";
-import { Container } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import { BackButton } from "../common/BackButton";
 
 const url = BASE_URL + PROFILE_URL;
@@ -46,7 +46,14 @@ export default function ProfilesPage() {
   return (
     <Container maxWidth="lg">
       <BackButton />
-      {loading ? <CircularProgress /> : <ProfilesList profiles={profiles} />}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        {loading ? <CircularProgress /> : <ProfilesList profiles={profiles} />}
+      </Box>
     </Container>
   );
 }
