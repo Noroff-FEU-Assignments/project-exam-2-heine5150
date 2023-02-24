@@ -125,9 +125,7 @@ export default function LoginPage() {
           </Box>
         </form>
 
-        <Link to="/register" variant="body2">
-          Not registered? Do it here!
-        </Link>
+        <Link to="/register">Not registered? Do it here!</Link>
       </Box>
     </Container>
   );

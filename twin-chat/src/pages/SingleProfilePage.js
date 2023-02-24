@@ -76,7 +76,7 @@ export default function SingleProfilePage() {
               }}
             />
           )}
-          <Box sx={{ padding: "30px" }}>
+          <Box sx={{ padding: { xs: "10px", md: "30px" } }}>
             <Stack
               sx={{
                 paddingTop: "10px",
