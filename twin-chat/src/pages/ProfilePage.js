@@ -56,7 +56,7 @@ export default function ProfilePage() {
         <CircularProgress />
       ) : (
         <>
-          <Paper>
+          <Paper sx={{ width: "100%", borderRadius: 0 }}>
             <Box
               sx={{
                 backgroundImage: `url(${profileData.banner})`,
