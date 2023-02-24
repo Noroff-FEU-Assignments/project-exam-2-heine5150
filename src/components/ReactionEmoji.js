@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { BASE_URL, POSTS_URL } from "../constants/api";
 import { AuthContext } from "../context/AuthContext";
 import { Button } from "@mui/material";
@@ -9,7 +9,6 @@ const emoji = "❤️";
 export default function ReactionEmoji({ postId }) {
   const { auth } = useContext(AuthContext);
   const { accessToken } = auth;
-  const [reload, setReload] = useState(false);
 
   const addLike = async () => {
     try {
@@ -24,15 +23,11 @@ export default function ReactionEmoji({ postId }) {
       }
       const data = await response.json();
       console.log("Received data", data);
-      setReload(true);
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }
   };
-
-  if (reload) {
-    return <React.Fragment />;
-  }
 
   return (
     <Button variant="outlined" onClick={addLike}>
