@@ -66,8 +66,7 @@ export default function FollowUnfollow({ profileName }) {
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
-          marginRight: { xs: 0, md: "20px" },
-          marginBottom: { xs: "10px", md: 0 },
+          gap: { xs: "10px", md: "20px" },
         }}
       >
         <PersonAddOutlinedIcon /> Follow
