@@ -65,7 +65,7 @@ export default function FollowUnfollow({ profileName }) {
         onClick={follow}
         sx={{
           marginRight: { xs: 0, md: "20px" },
-          marginBottom: { xs: "10px", md: 0 },
+          // marginBottom: { xs: "10px", md: 0 },
         }}
       >
         <PersonAddOutlinedIcon /> Follow
