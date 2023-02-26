@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+#Social Media Twin-Chat Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project aims to create a modern front-end social media application for an existing social media company. This project targets a new niche audience of twin families. The project is based on the API documentation provided by Noroff and includes various features such as user registration, login, profile management, post creation, comment creation, and more.
 
-## Available Scripts
+##User Stories
 
-In the project directory, you can run:
+###The following user stories have been identified for this project:
 
-### `npm start`
+    A user with a stud.noroff.no email may register
+    A registered user may login
+    A registered user may update their avatar and banner
+    A registered user may logout
+    A registered user may view a list of Posts
+    A registered user may view a list of Profiles
+    A registered user may view a single Post by id
+    A registered user may view a single Profile by name
+    A registered user may create a Post
+    A registered user may update a Post they own
+    A registered user may delete a Post they own
+    A registered user may create a Comment on any Post
+    A registered user may react to any Post with an emoji
+    A registered user may follow and unfollow another Profile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##Technical Restrictions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+###The following technical restrictions have been set by the company CTO:
 
-### `npm test`
+    Must use an approved JavaScript Framework (React >16).
+    Must use an approved CSS Framework (Bootstrap >5, Tailwind >3, MUI >5, Styled Components, CSS Modules) This project uses MUI.
+    Must be hosted on an approved Static Host (GitHub Pages, Netlify).
+    This project is hosted on Netlify.
+    Must use an approved Design Application (Adobe XD, Figma, Sketch).
+    This project have used both Figma and Adobe XD.
+    Must use an approved Planning Application (Trello, GitHub Projects)
+    This project using Trello.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###Requirements
 
-### `npm run build`
+    All admin functionality is managed by an existing application. This project only covers the front-end application for the API.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The API used for this project can be found under Social EndPoints in the Noroff API documentation.
+Resources
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Noroff documentation](https://noroff-api-docs.netlify.app/ "Noroff API")
 
-### `npm run eject`
+##Approved Resources
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The following libraries and services have been approved for use in this project:
+###JavaScript Frameworks
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    React (>16)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+###CSS Frameworks
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    Bootstrap (>5)
+    Tailwind (>3)
+    MUI (>5)  (this project has used MUI)
+    Styled Components
+    CSS Modules
 
-## Learn More
+###Hosting Services
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    GitHub Pages
+    Netlify (this project has used Netlify)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+###Design Applications
 
-### Code Splitting
+    Adobe XD  (this project has used Adobe XD and Figma)
+    Figma
+    Sketch
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+###Planning Applications
 
-### Analyzing the Bundle Size
+    Trello  (this project has used Trello)
+    GitHub Projects
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##Delivery
 
-### Making a Progressive Web App
+###The following links are required for delivery:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    A Gantt chart for project timing
+    A design prototype
+    A style guide
+    A kanban project board
+    A repository link
+    A hosted application demo link
 
-### Advanced Configuration
+##Special Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+###To set up and run the project locally, follow these steps:
 
-### Deployment
+    Clone the repository to your local machine.
+    Navigate to the project directory and run "npm install" to install dependencies.
+    Type "npm start" and hit enter to start the development server.
+    Open http://localhost:3000 if it doesn't do it automaticly to view the app in the browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For testers, please ensure that all user stories have been implemented and that the app is fully functional. If any issues are found, please report them to the project owner.

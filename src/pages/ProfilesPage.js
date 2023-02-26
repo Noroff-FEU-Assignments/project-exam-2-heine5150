@@ -44,15 +44,24 @@ export default function ProfilesPage() {
   }, [auth]);
 
   return (
-    <Container maxWidth="lg">
+    <Container>
       <BackButton />
       <Box
+        maxWidth="lg"
         sx={{
           display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
           justifyContent: "center",
         }}
       >
-        {loading ? <CircularProgress /> : <ProfilesList profiles={profiles} />}
+        <Box>
+          {loading ? (
+            <CircularProgress />
+          ) : (
+            <ProfilesList profiles={profiles} />
+          )}
+        </Box>
       </Box>
     </Container>
   );

@@ -58,19 +58,28 @@ export default function FollowUnfollow({ profileName }) {
   };
 
   return (
-    <Box>
+    <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" } }}>
       <Button
         variant="contained"
         size="medium"
         onClick={follow}
         sx={{
-          marginRight: { xs: 0, md: "20px" },
-          // marginBottom: { xs: "10px", md: 0 },
+          marginRight: { xs: 0, sm: "20px" },
+          marginBottom: { xs: "10px", sm: 0 },
+          width: { xs: "100%", sm: "auto" },
         }}
       >
         <PersonAddOutlinedIcon /> Follow
       </Button>
-      <Button variant="contained" size="medium" onClick={unFollow}>
+      <Button
+        variant="contained"
+        size="medium"
+        onClick={unFollow}
+        sx={{
+          width: { xs: "100%", sm: "auto" },
+          marginLeft: { sm: "20px" },
+        }}
+      >
         <PersonAddDisabledOutlinedIcon /> Unfollow
       </Button>
     </Box>
