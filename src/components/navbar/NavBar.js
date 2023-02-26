@@ -123,7 +123,7 @@ export default function NavBar() {
                       sx={{
                         backgroundColor: "#fff",
                         "&:hover": {
-                          backgroundColor: "#ccc",
+                          backgroundColor: "background.main",
                         },
                       }}
                     >
