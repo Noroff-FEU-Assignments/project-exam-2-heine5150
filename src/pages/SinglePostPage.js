@@ -50,14 +50,6 @@ export default function SinglePostPage() {
     loadPost();
   }, [postId]);
 
-  if (loading) {
-    return <CircularProgress />;
-  }
-
-  if (!post) {
-    return <NotFoundPage />;
-  }
-
   return (
     <Container>
       <BackButton />

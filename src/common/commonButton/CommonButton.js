@@ -2,7 +2,6 @@ import Button from "@mui/material/Button";
 
 export default function CommonButton({
   children,
-  color,
   disabled,
   size,
   variant,
